@@ -1,0 +1,160 @@
+/* Fontê 'Poppins' ji Google Fonts têxe */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* Mîhengên şêwaza gerdûnî */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Li seranserê rûpelê tîpa 'Poppins' bikar bînin */
+}
+
+/* Mîhengên şêwaza rûpelê */
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452); /* Siyah ve mavi tonlarında lineer gradyan arka plan */
+}
+
+/* Mîhengên şêwaza qutiya hesabker */
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5); /* Siyayekî sivik li qutiya hesabkerê hat zêdekirin */
+}
+
+/* Mîhengên şêwaza qutiya têketinê */
+input{
+    width: 320px;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(84, 84, 84, 0.1); /* Siyayek sivik li qutiya têketinê hat zêdekirin */
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff; /* Nivîsa bi spî */
+}
+
+/* Mîhengên şêwaza cîhê ji bo qutiya têketinê */
+input::placeholder{
+    color: #ffffff; /* Nivîsara cihgir bi spî */
+}
+
+/* Mîhengên şêwaza bişkokê */
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff; /* Nivîsa bi spî */
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1); /* Siyayek sivik li bişkokan hat zêdekirin */
+    cursor: pointer;
+}
+
+/* Mîhenga şêwaza xwerû ya bişkojkê wekhev dike */
+.equalBtn{
+    background-color: #fb7c14; /* Paşnav bi rengê porteqalî */
+}
+
+.equalBtn1{
+    background-color: #25231b; /* Paşnav bi rengê porteqalî */
+}
+
+.equalBtn2{
+    background-color: #7c960c; /* Paşnav bi rengê porteqalî */
+}
+
+/* Mîhenga şêwaza xwerû bişkokên operator */
+.operator{
+    color: #ffffff; /* Nivîsara operatorê bi kesk */
+}
+
+
+
+/* Keyframên ku anîmasyona gradient a paşperdeyê diyar dikin */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Danasîna şêwazê ji bo çîna .animation-ruerd */
+.animasyona-ruerd {
+   /* Taybetmendiyên şêwaza paşîn */
+    background: rgb(255 255 255 / 25%); /* Paşnav bi dengê spî, 25% nezelalî */
+    border-radius: 1000% 1000% 0 0; /* Dîmeneke bi keviyên girover */
+    
+    /* Taybetmendiyên pozîsyon û mezinbûnê */
+    position: fixed; /* Helwesta sabît */
+    width: 200%; /* Firahiyê du qat */
+    height: 12em; /* Bilindahî 12em */
+    
+    /* Taybetmendiyên anîmasyonê */
+    animation: animasyona-ruerd 10s -3s linear infinite; /* anîmasyonek bi navê animationa-ruerd bikar bînin, dirêjahiya 10 çirkeyan, -3 çirkeyan dereng, veguheztina xêzkirî, dubarekirina bêdawî */
+    
+    /* Taybetmendiya zivirîna 3D */
+    transform: translate3d(0, 0, 0); /* Jicîhûwarkirina bi zivirandina 3D */
+    
+    /* Taybetmendiya dîtinê */
+    opacity: 0.8; /* 80% dîtbarî */
+    
+    /* Taybetmendiyên cihgirtinê */
+    bottom: 0; /* Li dûrahiya sifir ji qiraxa jêrîn */
+    left: 0; /* Dûrahiya sifir ji milê çepê */
+    
+    /* Taybetmendiya Z-index */
+    z-index: -1; /* Li jêr tiştên din */
+}
+
+/* Danasîna şêwazê ji bo çîna duyemîn .animation-ruerd */
+.animasyona-ruerd:nth-of-type(2) {
+    bottom: -1.25em; /* Dûrahiya -1,25em ji qiraxa jêrîn */
+    animation: animasyona-ruerd 18s linear reverse infinite; /* animationa-ruerd anîmasyon, dirêjahiya 18 çirkeyan, veguheztina rêzikî, berevajî, dubarekirina bêdawî */
+    opacity: 0.8; /* 80% dîtbarî */
+}
+
+/* Danasîna şêwazê ji bo çîna sêyemîn .animation-ruerd */
+.animasyona-ruerd:nth-of-type(3) {
+    bottom: -2.5em; /* Dûrahiya -2,5em ji qiraxa jêrîn */
+    animation: animasyona-ruerd 20s -1s reverse infinite; /* animationa-ruerd anîmasyon, 20 saniye demdirêj, -1 çirke dereng, berevajî, dubarekirina bêdawî */
+    opacity: 0.9; /* 90% dîtbarî */
+}
+
+/* anîmasyon-ruerd pênaseya keyframes */
+@keyframes animasyona-ruerd {
+    2% {
+        transform: translateX(1); /* 2% pêşdeçûn: 1 yekîneya rastê li tenişta Xê biguhezîne */
+    }
+
+    25% {
+        transform: translateX(-25%); /* 25% pêşkeftin: 25% guheztina çepê li tenişta Xê */
+    }
+
+    50% {
+        transform: translateX(-50%); /* 50% pêşkeftin: 50% guheztina çepê li ber eksê X */
+    }
+
+    75% {
+        transform: translateX(-25%); /* 75% pêşkeftin: 25% guheztina çepê li tenişta Xê */
+    }
+
+    100% {
+        transform: translateX(1); /* 100% pêşkeftin: 1 yekîneyek li ser xaka X-ê ber bi rastê ve bizivirîne */
+    }
+}
